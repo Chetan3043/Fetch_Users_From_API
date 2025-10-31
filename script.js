@@ -1,7 +1,7 @@
 const userContainer = document.getElementById("user-container");
 const reloadBtn = document.getElementById("reload-btn");
 
-// Function 1️⃣: Fetch and display users
+// Function 1️: Fetch and display users
 async function fetchUsers() {
   userContainer.innerHTML = "<p>Loading user data...</p>";
 
@@ -20,7 +20,7 @@ async function fetchUsers() {
   }
 }
 
-// Function 2️⃣: Display users on the page
+// Function 2️: Display users on the page
 function displayUsers(users) {
   userContainer.innerHTML = ""; // clear container
   users.forEach(user => {
@@ -35,12 +35,12 @@ function displayUsers(users) {
   });
 }
 
-// Function 3️⃣: Show error message
+// Function 3️: Show error message
 function showError(message) {
   userContainer.innerHTML = `<p class="error">${message}</p>`;
 }
 
-// Function 4️⃣: Handle offline/online status
+// Function 4️: Handle offline/online status
 function checkNetworkStatus() {
   if (!navigator.onLine) {
     userContainer.innerHTML = `
@@ -53,7 +53,7 @@ function checkNetworkStatus() {
   }
 }
 
-// Function 5️⃣: Reload button functionality
+// Function 5️: Reload button functionality
 reloadBtn.addEventListener("click", () => {
   checkNetworkStatus();
 });
@@ -74,3 +74,4 @@ function showOnlineMessage() {
 
 // Fetch on page load
 checkNetworkStatus();
+
